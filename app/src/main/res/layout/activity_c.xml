@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".CActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Это активити A"
+        android:text="Это активити C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -28,10 +28,10 @@
         app:layout_constraintVertical_bias="0.476" />
 
     <Button
-        android:id="@+id/activityBButton"
+        android:id="@+id/activityAButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Activity B"
+        android:text="Activity A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.283"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -40,10 +40,10 @@
         app:layout_constraintVertical_bias="0.524" />
 
     <Button
-        android:id="@+id/activityCButton"
+        android:id="@+id/activityBButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Activity C"
+        android:text="Activity B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.745"
         app:layout_constraintLeft_toLeftOf="parent"
