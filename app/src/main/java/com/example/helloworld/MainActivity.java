@@ -17,44 +17,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent = getIntent();
-        String text = intent.getStringExtra("Message");
-
-        if(text != null) {
-            TextView textView = findViewById(R.id.textFromOtherActivity);
-            textView.setText(text);
-        }
-
-        Button bActivityButton = findViewById(R.id.activityBButton);
-        bActivityButton.setOnClickListener(new View.OnClickListener() {
+        Button loginButton = findViewById(R.id.loginButton);
+        loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, BActivity.class);
-                intent.putExtra("Message", "Привет из активити А");
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 startActivity(intent);
             }
         });
 
-//        Button cActivityButton = findViewById(R.id.activityCButton);
-//        cActivityButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(MainActivity.this, CActivity.class);
-//                intent.putExtra("Message", "Привет из активити А");
-//                startActivity(intent);
-//            }
-//        });
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.d("App", "Ждем твоего возвращения в А");
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.d("App", "С возвращением в А");
+        Button regButton = findViewById(R.id.regButton);
+        regButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ThirdActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
